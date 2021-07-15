@@ -34,10 +34,6 @@
 					class="btn btn-danger mt-5 btnStarted"
 					@click="checkStarted"
 				>
-
-
-
-				
 					Get Started
 				</button>
 			</router-link>
@@ -48,6 +44,7 @@
 import { mapActions, mapState } from 'vuex';
 import { axiosNotToken } from '@/helper/axios';
 import { capitalizarPalabras } from '@/helper/capitalize';
+import { formatId } from '../helper/formatUrl';
 export default {
 	computed:{
 		...mapState('pokemon',['pokemon'])
@@ -65,7 +62,7 @@ export default {
 
 			const formatPokemon = results.map((r, index) => ({
 				...r,
-				id: index+1,
+				id: formatId(r.url),
 				estado: false,
 				nameCapitalize: capitalizarPalabras(r.name),
 				visible: true,

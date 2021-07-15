@@ -7,7 +7,7 @@
 		tabindex="-1"
 		aria-hidden="true"
 	>
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div
 					class="fondoImagenPokemon"
@@ -71,7 +71,7 @@
 									Share to my friends
 								</button>
 							</div>
-							<div>
+							<div >
 								<btn-favorite-pokemon 
 									:dataPokemon="active"
 								/>

@@ -1,6 +1,6 @@
 <template>
-	<div class="d-flex mb-2 divPokemon">
-		<div class="col-8">
+	<div class="d-flex mb-2 divPokemon animate__animated animate__fadeIn">
+		<div class="col-9">
 			<p
 				class="float-start namePokemon"
 				@click="openModal(data)"
@@ -10,7 +10,7 @@
 				{{ data.nameCapitalize }}
 			</p>
 		</div>
-		<div class="col-4">
+		<div class="col-3 entryBotonPokemon">
 			<btn-favorite-pokemon :dataPokemon="data" />
 		</div>
 	</div>
@@ -29,9 +29,10 @@ export default {
 	methods: {
 		...mapActions("pokemon", ["activePokemon"]),
 		async openModal(data) {
-			const { name, estado } = data;
+		
+			const { name, estado, id } = data;
 			const { data: pokemonData } = await axiosNotToken(`pokemon/${name}`);
-			const { id, name: namePokemon, weight, height, types } = pokemonData;
+			const { weight, height, types } = pokemonData;
 
 			const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 
@@ -41,7 +42,7 @@ export default {
 
 			this.activePokemon({
 				id,
-				namePokemon: capitalizarPalabras(namePokemon),
+				namePokemon: capitalizarPalabras(name),
 				weight,
 				height,
 				types: formatType,

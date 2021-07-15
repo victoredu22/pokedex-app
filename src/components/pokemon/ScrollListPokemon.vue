@@ -21,6 +21,7 @@
 import { axiosNotToken } from "@/helper/axios";
 import { mapActions, mapState } from "vuex";
 import { capitalizarPalabras } from "@/helper/capitalize";
+import {formatId} from '../../helper/formatUrl';
 import EntrySectionPokemon from "./EntrySectionPokemon.vue";
 import EmptyListPokemon from "./EmptyListPokemon.vue";
 
@@ -28,7 +29,7 @@ export default {
 	components: { EntrySectionPokemon, EmptyListPokemon },
 	data: () => ({
 		limit: 20,
-		contador: 0,
+		contador: 20,
 		busy: false,
 	}),
 	computed: {
@@ -42,16 +43,15 @@ export default {
 
 		async getData() {
 			this.busy = true;
-			console.log("holaXXXXXX");
-
+		
 			const { data } = await axiosNotToken(
 				"pokemon?offset=" + this.contador + "&limit=20"
 			);
-			const { results } = data;
 
+			const { results } = data;			
 			const formatPokemon = results.map((r, index) => ({
 				...r,
-				id: index+1,
+				id: formatId(r.url),
 				estado: false,
 				nameCapitalize: capitalizarPalabras(r.name),
 				visible: true,
@@ -60,7 +60,7 @@ export default {
 			if (results) {
 				this.contador += 20;
 			}
-
+		
 			this.startPokemon(this.pokemon.concat(formatPokemon));
 			this.busy = false;
 		},

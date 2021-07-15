@@ -8,6 +8,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 Vue.config.productionTip = false
 var infiniteScroll =  require('vue-infinite-scroll');
 Vue.use(infiniteScroll)
+import "animate.css";
 
 new Vue({
   router,

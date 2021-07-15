@@ -9,10 +9,6 @@
    --white: #F9F9F9 !important;
    --secondWhite: #F5F5F5 !important;
  }
-
- 
-
-
 #app{
   background-color: #E5E5E5 !important;
   height: 100vh;
@@ -21,7 +17,13 @@
   background-color: #E5E5E5 !important;
 }
 .containerWelcome {
-	margin-top: 9%;
+	margin-top: 20vh;
+	display: flex;
+	justify-content: center;
+}
+
+.containerLoading{
+	margin-top: 40vh;
 	display: flex;
 	justify-content: center;
 }
@@ -69,6 +71,7 @@ line-height: 150%;
 	height: 100px;
 	text-align: center;
 	line-height: 100px;
+	top: 25%;
 }
 .positionFondo {
 	width: 230px;
@@ -80,8 +83,8 @@ line-height: 150%;
 .positionPokebal {
 	width: 150px;
 	height: 150px;
-	top: 25vh;
-	right: 50px;
+	top: 30vh;
+	right: 25%;
 	z-index: 1;
 }
 .positionPikachu {
@@ -153,7 +156,7 @@ color: #5E5E5E;
 }
 
 .containerFavorite {
-	margin-top: 10px;
+	/* margin-top: 10px; */
 	display: flex;
 	justify-content: flex-end;
 }
@@ -217,6 +220,10 @@ body::-webkit-scrollbar {
 	-o-background-size: cover;
 	background-size: cover;					
 }
+.entryBotonPokemon{
+	margin-top:10px; 
+	width:20%;
+}
 .imagePokemon{
 	height:180px;    
 	margin-top: -14px;
@@ -225,7 +232,9 @@ body::-webkit-scrollbar {
 	width:100%;
 	padding: 13px 30px 20px 30px;
 }
-
+.favoriteContainer{
+	background-color:#E5E5E5 !important
+}
 .btnDisabled {
 	border-radius: 60px;
 	color: white;

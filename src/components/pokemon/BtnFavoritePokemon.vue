@@ -1,5 +1,5 @@
 <template>
-	<div class="container containerFavorite text-center">
+	<div class="containerFavorite text-center">
 		<img
 			class="positionFavorite"
 			:src="
@@ -22,7 +22,6 @@ export default {
   methods:{
     ...mapActions('pokemon',['changeEstado']),
     change(data) {
-
 			const estado = data.estado ? false : true;
 			this.changeEstado({ ...data, estado });
 		},

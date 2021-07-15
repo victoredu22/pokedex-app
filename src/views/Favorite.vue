@@ -2,8 +2,8 @@
 <div>
 		<search-pokemon />
 		<empty-list-pokemon v-if="viewPokemon"/>
-		<favorite-pokemon />
-		<footer-pokemon />
+		<favorite-pokemon  v-if="!viewPokemon" />
+		<footer-pokemon v-if="!viewPokemon" />
 		<modal-pokemon/>
 </div>
 </template>
