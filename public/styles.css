@@ -1,0 +1,244 @@
+:root{
+  /*  --primary:#6209DB; */
+   --yellow:#ECA539 !important;
+   --red: #F22539 !important;
+   --secondRed: #F22539 !important;
+   --grey: #E8E8E8 !important;
+   --secondGrey : #BFBFBF !important;
+   --thirdGrey : #5E5E5E !important;
+   --white: #F9F9F9 !important;
+   --secondWhite: #F5F5F5 !important;
+ }
+
+ 
+
+
+#app{
+  background-color: #E5E5E5 !important;
+  height: 100vh;
+}
+#divList{
+  background-color: #E5E5E5 !important;
+}
+.containerWelcome {
+	margin-top: 9%;
+	display: flex;
+	justify-content: center;
+}
+.welcomeInfo {
+	margin-top: 120px;
+}
+
+.tituloPokemon{
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+}
+.parrafoPokemon{
+  font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 150%;
+}
+
+.btnStarted {
+	border-radius: 60px;
+	background: var(--red) ;
+	color: white;
+	font-size: 18px;
+	font-weight: 500;
+	width: 140px;
+  font-family: Lato;
+}
+.btnStarted::hover {
+	border-radius: 60px;
+	background: var(--secondRed);
+  color: white;
+}
+#main-div {
+	position: relative;
+	min-width: 320px;
+	height: 200px;
+}
+.cardWelcome {
+	position: absolute;
+	width: 60px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+.positionFondo {
+	width: 230px;
+	height: 221px;
+	top: 40px;
+	right: 50px;
+	z-index: 1;
+}
+.positionPokebal {
+	width: 150px;
+	height: 150px;
+	top: 25vh;
+	right: 50px;
+	z-index: 1;
+}
+.positionPikachu {
+	width: 340px;
+	height: 300px;
+	top: -25px;
+	right: -5%;
+	z-index: 100;
+}
+
+footer {
+	background: white;
+	height: 70px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04);
+	/*  poner footer abajo */
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 20;
+}
+
+.searchProducto {
+	padding-left: 43px;
+	border: 5px;
+	z-index: 10;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04);
+	color: #FFFFFF;
+  height:50px
+}
+.searchProducto::-webkit-input-placeholder {
+	color: #bfbfbf !important;
+}
+
+.searchProducto:focus {
+	box-shadow: none;
+	color: #bfbfbf;
+}
+.searchNav {
+	position: absolute;
+	margin-left: 15px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	color: #bfbfbf;
+}
+.parrafoBuscado{
+  font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 43px;
+align-items: center;
+text-align: center;
+margin-top: 3%;
+color: #353535;
+}
+.infoBuscado{
+  font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 150%;
+/* identical to box height, or 30px */
+
+text-align: center;
+
+color: #5E5E5E;
+}
+
+.containerFavorite {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+}
+.cardListPokemon {
+	position: absolute;
+}
+.positionFavorite {
+	margin-left: -35px;
+	cursor: pointer;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+.scrollable {
+	overflow: hidden;
+	overflow-y: scroll;
+	height: calc(100vh - 20px);
+}
+
+.divPokemon{
+  border-radius: 5px;
+  background-color:white; 
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04); 
+  height:60px
+}
+.namePokemon{
+  margin:17px; 
+  font-family: Lato;
+  font-size: 22px;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 642px;
+		margin: 1.75rem auto;
+	}
+}
+
+.spanModalDetail {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 150%;
+}
+.spanModalData {
+	font-family: Lato;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 150%;
+	margin: 5px;
+}
+.list-group-item {
+	padding: 0.5rem 0rem !important;
+}
+.fondoImagenPokemon{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;					
+}
+.imagePokemon{
+	height:180px;    
+	margin-top: -14px;
+}
+.list-pokemon{
+	width:100%;
+	padding: 13px 30px 20px 30px;
+}
+
+.btnDisabled {
+	border-radius: 60px;
+	color: white;
+	background: #bfbfbf;
+	font-size: 18px;
+	font-weight: 500;
+	width: 140px;
+}
+.btnDisabled:hover {
+	border-radius: 60px;
+	color: white;
+	background: #bfbfbf;
+	font-size: 18px;
+	font-weight: 500;
+	width: 140px;
+}
