@@ -9,10 +9,6 @@ Vue.config.productionTip = false
 var infiniteScroll =  require('vue-infinite-scroll');
 Vue.use(infiniteScroll)
 
-import Clipboard from 'v-clipboard'
-Vue.use(Clipboard)
-
-
 new Vue({
   router,
   store,
