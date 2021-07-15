@@ -34,6 +34,10 @@
 					class="btn btn-danger mt-5 btnStarted"
 					@click="checkStarted"
 				>
+
+
+
+				
 					Get Started
 				</button>
 			</router-link>
